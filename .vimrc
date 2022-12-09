@@ -1,6 +1,5 @@
 set number
 set cursorline
-set cursorcolumn
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -16,18 +15,22 @@ set ruler
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'haishanh/night-owl.vim'
-Plug 'fladson/vim-kitty'
+Plug 'UndeadLeech/vim-undead'
+" Plug 'itchyny/lightline.vim'
+" Plug 'haishanh/night-owl.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-if (has("termguicolors"))
-    set termguicolors
-endif
+" if (has("termguicolors"))
+    " set termguicolors
+" endif
 
 syntax enable
-colorscheme night-owl
+" colorscheme night-owl
+colorscheme undead
 
-let g:lightline = { 'colorscheme': 'nightowl' }
+" let g:lightline = { 'colorscheme': 'nightowl' }
+let g:airline_theme = 'undead'
